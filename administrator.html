@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Wikipedia</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <a class="navbar-brand" href="index.html" style="margin-top: 15px;"><img src="img/wiki_logo.png" id="logo"></a>
+
+      <div class="sidebar-heading" id="naslov" style="margin-top: -15px;">Wikipedia</div>
+      <div class="sidebar-heading" id="naslov" style="margin-top: -35px;"><small>Slobodna enciklopedija.</small></div>
+
+      <div class="list-group list-group-flush">
+        <a href="kategorije.html" class="list-group-item list-group-item-action list-group-item-primary">Sve kategorije</a>
+        <a href="administrator.html" class="list-group-item list-group-item-action bg-light" id="admin" style="display: none;">Administratorska ploča</a>
+        <a href="#rand" class="list-group-item list-group-item-action bg-light">Nauči nešto novo!</a>
+        <a href="novi_clanak.html" class="list-group-item list-group-item-action bg-light">Novi članak</a>
+
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Korisnici
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" type="button" data-toggle="modal" data-target="#myModalLogin">Prijava</a>
+                <a class="dropdown-item" type="button" data-toggle="modal"
+                  data-target="#myModalRegister">Registracija</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" type="button" id="logout">Odjava</a>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div id="adminPage">
+        <h1 id="sysop" class="firstHeading">Suradnik:</h1>
+        <div id="anon-edit-warning" class="warningbox" style="text-align: center;">
+            <table class="messagebox standard-talk" style="border: 1px solid #A3B1BF;background-color: #CEE0F2; margin: auto; font-size: 1em;" >
+                <tbody>
+                    <tr>
+                        <td align="center" width="5%">
+                            </p>
+                        </td>
+                        <td>
+                            <center><b>Dužnost administratori obnašaju isključivo kao volonteri, i nitko od njih nije
+                                    zaposlenik zaklade Wikimedija!</b></center>
+                            <p><small>Administratori, admini ili system operatori su suradnici kojima je povjeren pristup
+                                    ograničenim tehničkim dodacima ("alatima") pomoću kojih održavaju Wikipediju.
+                                    Administratori mogu primjerice zaštititi i brisati stranice, blokirati druge suradnike
+                                    ili vratiti učinjeno.</small>
+                            </p>
+                            <p style="text-align:center; margin-top: -10px;">
+                                <small style="text-align: center;">Wikipedija na hrvatskom jeziku ima 14 administratora (2,4
+                                    % svih aktivnih suradnika).
+                                </small>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+        
+        <ul class="nav nav-tabs" style="margin-top: 30px;">
+            <li class="nav-item">
+                <a class="nav-link active" role="tab" data-toggle="tab" href="#home">Podnešeni članci.</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" role="tab" data-toggle="tab" href="#profile">Dodavanje novih administratora</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home"> 
+                <table class="table table-striped" id="tablicaAdmin">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Ime članka</th>
+                        <th scope="col">Kategorija</th>
+                        <th scope="col">Datum</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile"> 
+              <div id="makeAdmin">
+                <form class="admin-actions" style="margin-top: 20px;">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1"><strong>Učinite korisnika administratorom.</strong></label>
+                        <input type="email" class="form-control" id="admin-email" aria-describedby="emailHelp" placeholder="Unesi email">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Spremi</button>
+                  </form>
+            </div>
+            </div>
+
+        </div>
+    </div>
+ 
+      
+       
+      
+      <!-- Button trigger modal -->
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModalLogin">
+        <div class="modal-dialog modal-login">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="avatar">
+              </div>
+              <h4 class="modal-title">Prijava za uređivače</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form id="login-form">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="login-email" placeholder="Username" required="required">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="login-password" placeholder="Password"
+                    required="required">
+                </div>
+                <div class="form-group" id="login-form">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Prijava</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="#">Forgot Password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="myModalRegister" class="modal fade">
+        <div class="modal-dialog modal-login">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="avatar">
+              </div>
+              <h4 class="modal-title">Registracija novog uređivača</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form id="signup-form">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="signup-email" placeholder="Email" required="required">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="signup-password" placeholder="Lozinka"
+                    required="required">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="signup-passwordCheck" placeholder="Ponovite lozinku"
+                    required="required">
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Registriraj me!</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <script>
+      function Parse() {
+        var input = $('#inptSearch').val();
+        $('a[href="#search"]').attr('href', 'search.html?Searchterm=' + input);
+      }
+    </script>
+      <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- /container -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-functions.js"></script>
+    <script src="js/firebase_config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/administrator.js"></script>
+
+    <!-- Menu Toggle Script -->
+
+
+</body>
+
+</html>
